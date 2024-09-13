@@ -1,4 +1,6 @@
+import 'package:cu_iti_quizapp/data/globals.dart';
 import 'package:cu_iti_quizapp/screens/questions_screen.dart';
+import 'package:cu_iti_quizapp/widgets/category_container.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -11,64 +13,25 @@ class CategoryScreen extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Expanded(
-            child: InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const QuestionsScreen(),
-                  ),
-                );
-              },
-              child: Container(
-                color: Colors.blue,
-                child: Center(
-                    child: Text(
-                  'Sports quiz',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 36),
-                )),
-              ),
-            ),
+          CategoryContainer(
+            questionList: sportQuizQuestions,
+            themeColor: Colors.blue,
+            quizName: 'Sports quiz',
           ),
-          Expanded(
-            child: InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const QuestionsScreen(),
-                  ),
-                );
-              },
-              child: Container(
-                color: Colors.white,
-                child: Center(
-                    child: Text('IQ quiz',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 36))),
-              ),
-            ),
+          CategoryContainer(
+            questionList: iqQuizQuestions,
+            themeColor: Colors.white,
+            quizName: 'IQ quiz',
           ),
-          Expanded(
-            child: InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const QuestionsScreen(),
-                  ),
-                );
-              },
-              child: Container(
-                color: Colors.red,
-                child: Center(
-                    child: Text('Math quiz',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 36))),
-              ),
-            ),
+          CategoryContainer(
+            quizName: 'Math quiz',
+            questionList: mathQuizQuestions,
+            themeColor: Colors.red,
           ),
+          CategoryContainer(
+              questionList: iqQuizQuestions,
+              quizName: 'Arts quiz',
+              themeColor: Colors.green)
         ],
       ),
     );
