@@ -1,8 +1,6 @@
 import 'dart:io';
 
-import 'package:cu_iti_quizapp/screens/category_screen.dart';
-import 'package:cu_iti_quizapp/screens/landing_screen.dart';
-import 'package:cu_iti_quizapp/screens/questions_screen.dart';
+import 'package:cu_iti_quizapp/screens/news_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +20,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
           useMaterial3: true,
           appBarTheme: AppBarTheme(backgroundColor: Colors.green)),
-      home: LandingScreen(),
+      home: NewsScreen(),
     );
     //  Platform.isIOS
     //     ? CupertinoApp(
