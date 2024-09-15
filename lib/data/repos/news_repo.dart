@@ -16,7 +16,11 @@ class NewsRepo {
     if (response.statusCode == 200) {
       print('news api response is:   $response');
 
-      NewsResponse newsModel = NewsResponse.fromJson(response.data);
+      print(response.data['totalResults']);
+
+      var newsModel = NewsResponse.fromJson(response.data);
+
+      newsModel.totalResults;
       return newsModel;
     } else {
       return null;
