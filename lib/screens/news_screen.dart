@@ -13,6 +13,14 @@ class _NewsScreenState extends State<NewsScreen> {
   NewsResponse? myNew;
   int state = 0;
 
+  // @override
+  // void initState() {
+  //   // TODO: implement initState
+  //   super.initState();
+
+  //   NewsRepo().getNews();
+  // }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

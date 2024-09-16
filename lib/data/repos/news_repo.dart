@@ -8,7 +8,7 @@ class NewsRepo {
   Future<NewsResponse?> getNews() async {
     var response = await dio.get(getNewsEndPoint, queryParameters: {
       'q': 'tesla',
-      'from': '2024-08-15',
+      'from': '2024-09-11',
       'sortBy': 'publishedAt',
       'apiKey': '7c07f0c86d484b30a5af1289c531cff1'
     });
